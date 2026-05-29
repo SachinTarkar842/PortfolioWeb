@@ -1,7 +1,7 @@
 /* Fonts loaded via HTML link */
 
 :root {
-  --bg: #020202;
+  --bg: #000000;
   --surface: #121212;
   --line: #242424;
   --accent: #c4956a;
@@ -66,8 +66,9 @@ img {
   position: fixed;
   left: 0;
   top: 0;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 2.2rem;
   transform: translate3d(var(--cursor-x, 0px), var(--cursor-y, 0px), 0) translate(-50%, -50%) rotate(var(--cursor-angle, 0deg));
   pointer-events: none;
   z-index: 999;
@@ -189,7 +190,7 @@ h3 em {
   align-items: center;
   gap: 1rem;
   padding: 1.45rem max(1.5rem, calc((100% - var(--max-width)) / 2 + 1.5rem)) 1rem;
-  background: linear-gradient(180deg, rgba(2, 2, 2, 0.96), rgba(2, 2, 2, 0.72) 72%, transparent);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.96), rgba(0, 0, 0, 0.72) 72%, transparent);
   backdrop-filter: blur(10px);
 }
 
@@ -464,7 +465,7 @@ body.modal-open {
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background: rgba(2, 2, 2, 0.92);
+  background: rgba(0, 0, 0, 0.92);
   backdrop-filter: blur(18px);
   display: grid;
   place-items: center;
@@ -925,11 +926,8 @@ body.modal-open {
   width: min(calc(100% - 3rem), 1480px);
 }
 
-.project-detail-page .global-cursor {
-  width: 2.8rem;
-  height: 2.8rem;
-  font-size: 2.8rem;
-}
+
+
 
 .project-detail-main {
   padding-top: clamp(2rem, 4vw, 4rem);
@@ -2268,12 +2266,12 @@ section[id],
   }
 
   .global-cursor {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.8rem;
+    height: 1.8rem;
   }
 
   .global-cursor::before {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   body {

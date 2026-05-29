@@ -455,10 +455,8 @@ if (globalCursor && !prefersReducedMotion && window.matchMedia('(pointer: fine)'
     // Reset any existing reveal
     textElement.style.setProperty('--reveal-pos', '0%');
     
-    // Responsive cursor size (Scaled up per request)
-    let cursorSize = '4.5rem';
-    if (window.innerWidth < 768) cursorSize = '3.5rem';
-    if (window.innerWidth < 480) cursorSize = '2.8rem';
+    // Responsive cursor size (fixed to default size)
+    let cursorSize = window.innerWidth < 768 ? '1.8rem' : '2.2rem';
     
     globalCursor.style.width = cursorSize;
     globalCursor.style.height = cursorSize;
@@ -539,7 +537,7 @@ if (globalCursor && !prefersReducedMotion && window.matchMedia('(pointer: fine)'
         targetY = endY + (currentMouseY - endY) * easeTransition;
         
         // Scale down cursor (Crisply)
-        const normalSize = window.innerWidth < 768 ? 1.5 : 1.8;
+        const normalSize = window.innerWidth < 768 ? 1.8 : 2.2;
         const maxSize = parseFloat(cursorSize);
         const currentSize = maxSize - (maxSize - normalSize) * transitionProgress;
         
@@ -563,7 +561,7 @@ if (globalCursor && !prefersReducedMotion && window.matchMedia('(pointer: fine)'
           fusionStage.style.setProperty('--fusion-contrast', '1');
         }
         
-        const normalSize = window.innerWidth < 768 ? 1.5 : 1.8;
+        const normalSize = window.innerWidth < 768 ? 1.8 : 2.2;
         globalCursor.style.width = normalSize + 'rem';
         globalCursor.style.height = normalSize + 'rem';
       }
